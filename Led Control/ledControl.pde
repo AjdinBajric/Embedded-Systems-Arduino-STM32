@@ -12,7 +12,7 @@ void setup(){ //same as arduino program
   
   printArray(Serial.list());   //prints all available serial ports
   
-  port = new Serial(this, "COM4", 9600);  //i have connected arduino to com3, it would be different in linux and mac os
+  port = new Serial(this, "COM4", 9600);  
   
   //lets add buton to empty window
   
@@ -44,7 +44,7 @@ void setup(){ //same as arduino program
   ;
 }
 
-void draw(){  //same as loop in arduino
+void draw(){  
 
   background(150, 0 , 150); // background color of window (r, g, b) or (0 to 255)
   
@@ -54,8 +54,7 @@ void draw(){  //same as loop in arduino
   text("LED CONTROL", 80, 30);  // ("text", x coordinate, y coordinat)
 }
 
-//lets add some functions to our buttons
-//so whe you press any button, it sends perticular char over serial port
+
 
 void red(){
   port.write('r');
